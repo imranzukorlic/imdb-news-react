@@ -1,0 +1,15 @@
+.App {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.input {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

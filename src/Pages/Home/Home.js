@@ -18,7 +18,7 @@ const Home = () => {
       .get(`https://imdb-api.com/en/API/SearchTitle/k_f5o792qu/${finale}`)
       .then((res) => {
         setResult(res.data.results?.splice(0, 3));
-        console.log(res.data.results);
+        // console.log(res.data.results);
       });
   };
   React.useEffect(() => {

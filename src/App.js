@@ -6,6 +6,8 @@ import Home from "./Pages/Home/Home";
 import Movies from "./Pages/Movies/Movies";
 import Serie from "./Pages/Serie/Serie";
 import Footer from "./components/Footer/Footer";
+import SingleMovies from "./Pages/Movies/SingleMovies";
+import SingleSerias from "./Pages/Serie/SingleSerias";
 
 const App = () => {
   let activeStyle = {
@@ -43,7 +45,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movies" element={<Movies />} />
+          <Route path="/movies/:id" element={<SingleMovies />} />
           <Route path="/series" element={<Serie />} />
+          <Route path="/series/:id" element={<SingleSerias />} />
         </Routes>
       </div>
       <Footer />

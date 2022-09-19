@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Moviess.css";
 import {
   Card,
@@ -11,6 +12,7 @@ import axios from "axios";
 
 const Movies = () => {
   const [result, setResult] = useState([]);
+  const navigation = useNavigate();
 
   const getApi = () => {
     axios
@@ -30,7 +32,17 @@ const Movies = () => {
       {result
         .map((el) => {
           return (
-            <Card sx={{ width: 245 }} key={el.id}>
+            <Card
+              sx={{ width: 245 }}
+              key={el.id}
+              onClick={() =>
+                navigation(`/movies/${el.id}`, {
+                  state: {
+                    serias: el,
+                  },
+                })
+              }
+            >
               <CardActionArea>
                 <CardMedia
                   component="img"
